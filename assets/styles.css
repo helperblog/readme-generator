@@ -1,0 +1,201 @@
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --success-color: #16a34a;
+  --danger-color: #dc2626;
+  --dark-color: #1e293b;
+  --light-color: #f8fafc;
+  --gray-color: #94a3b8;
+}
+
+[data-bs-theme="dark"] {
+  --primary-color: #3b82f6;
+  --secondary-color: #1d4ed8;
+  --dark-color: #f8fafc;
+  --light-color: #1e293b;
+  --gray-color: #64748b;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  transition: all 0.3s ease;
+}
+
+/* Header Styles */
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  font-weight: 600;
+}
+
+/* Form Elements */
+.form-control, .form-select {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+}
+
+.form-control:focus, .form-select:focus {
+  box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.25);
+}
+
+/* Badge Preview */
+#techStackBadgesPreview img {
+  height: 28px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+/* File Upload */
+.file-upload-wrapper {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.file-upload-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.file-upload-label {
+  display: block;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 0.375rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.file-upload-label:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Image Previews */
+#screenshotPreviews img, #gifPreview img {
+  max-width: 100%;
+  max-height: 150px;
+  border-radius: 0.375rem;
+  border: 1px solid #e2e8f0;
+  padding: 0.25rem;
+  background-color: white;
+}
+
+/* Social Preview */
+.social-preview {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 500px;
+}
+
+.social-preview-image {
+  height: 200px;
+  background-color: #f1f5f9;
+  background-size: cover;
+  background-position: center;
+}
+
+.social-preview-content {
+  padding: 1rem;
+  background-color: white;
+}
+
+.social-preview-title {
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.social-preview-desc {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.social-preview-url {
+  color: #94a3b8;
+  font-size: 0.75rem;
+}
+
+/* Markdown Preview */
+.markdown-body {
+  padding: 1.5rem;
+  min-height: 500px;
+}
+
+.markdown-body pre {
+  background-color: #f8fafc;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  overflow-x: auto;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .sticky-lg-top {
+    position: static !important;
+  }
+}
+
+/* Dark Mode Adjustments */
+[data-bs-theme="dark"] {
+  .card {
+    background-color: #334155;
+    color: white;
+  }
+  
+  .card-header {
+    background-color: #1e293b !important;
+  }
+  
+  .form-control, .form-select {
+    background-color: #334155;
+    color: white;
+    border-color: #475569;
+  }
+  
+  .markdown-body {
+    background-color: #1e293b;
+    color: #e2e8f0;
+  }
+  
+  .markdown-body pre {
+    background-color: #0f172a;
+  }
+}
